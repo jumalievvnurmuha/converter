@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Harry Potter",
+    "age": 16,
+    "photo": "https://static.independent.co.uk/2023/04/05/09/newFile-7.jpg"
+  },
+  {
+    "name": "Tony Stark",
+    "age": 45,
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXH-z8rAOaQPunGSruZcl56zs0Y6XZ_Tm12g&s"
+  },
+  {
+    "name": "Walter White",
+    "age": 50,
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBylqDK3pgrRMnI75TyFJ6yszY_gz3lNIaiQ&s"
+  }
+]
