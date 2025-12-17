@@ -107,3 +107,45 @@ const converter = (element) => {
 converter(usdInput);
 converter(eurInput);
 converter(somInput);
+
+
+const btnNext = document.querySelector('#btn-next');
+const btnPrev = document.querySelector('#btn-prev');
+const card = document.querySelector('.card');
+
+let todoId = 1;
+
+btnNext.addEventListener('click', () => {
+  todoId = (todoId % 200) + 1;
+
+  fetch(`https:jsonplaceholder.typicode.com/todos/${todoId}`)
+    .then(response => response.json())
+    .then(data => {
+      const color = data.completed ? 'green' : 'red';
+
+      card.style.borderColor = color;
+      card.innerHTML = `
+        <p>${data.id}</p>
+        <p>${data.title}</p>
+        <p style="color:${color}">
+          ${data.completed ? 'true' : 'false'}
+        </p>
+      `;
+    });
+});
+
+btnPrev.onclick = () => {
+  todoId = (todoId + 198) % 200 + 1;
+
+  fetch(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
+    .then(res => res.json())
+    .then(data => {
+      const color = data.completed ? 'green' : 'red';
+      card.style.borderColor = color;
+      card.innerHTML = `
+        <p>${data.id}</p>
+        <p>${data.title}</p>
+        <p style="color:${color}">${data.completed}</p>
+      `;
+    });
+};

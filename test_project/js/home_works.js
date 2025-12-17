@@ -111,11 +111,3 @@ requester.onload = () => {
 };
 
 
-
-
-const xhr = new XMLHttpRequest();
-xhr.open('GET', './data/bio.json', true);
-xhr.onload = function() {
-    console.log(JSON.parse(xhr.responseText));
-};
-xhr.send();
